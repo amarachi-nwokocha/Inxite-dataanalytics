@@ -64,7 +64,7 @@ export default function WhatWeDoModern() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-[#0dce99] to-[#008dbb] bg-clip-text text-transparent">
+        <h2 className="text-4xl md:text-5xl font-extrabold bg-linear-to-r from-[#0dce99] to-[#008dbb] bg-clip-text text-transparent">
           End-to-End Data Services Built for Real-World Impact
         </h2>
 

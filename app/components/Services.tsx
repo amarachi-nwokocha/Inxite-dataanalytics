@@ -113,7 +113,7 @@ export default function HowWeWorkInteractive() {
             </div>
 
             <div className="absolute top-6 left-1/2 -translate-x-1/2">
-                <p className="border border-2 border-solid text-white/20 px-6 py-2 rounded-full text-sm font-semibold tracking-wide select-none pointer-events-none">
+                <p className=" border-2 border-solid text-white/20 px-6 py-2 rounded-full text-sm font-semibold tracking-wide select-none pointer-events-none">
                     HOW WE WORK
                 </p>
             </div>
@@ -126,7 +126,7 @@ export default function HowWeWorkInteractive() {
 
                         <h2 className="text-4xl font-bold">
                             Our{" "}
-                            <span className="text-[#0dce99]  px-3 py-1 rounded-lg">
+                            <span className="bg-linear-to-r from-[#0dce99] to-[#008dbb] bg-clip-text text-transparent px-2 py-1 rounded-lg">
                                 Process
                             </span>
                         </h2>
@@ -144,7 +144,7 @@ export default function HowWeWorkInteractive() {
                                             : "bg-white/5 border-white/10 hover:bg-white/10 text-white/70"
                                             }`}
                                     >
-                                        <span className="text-sm font-medium">{item}</span>
+                                        <span className="text-md font-semibold">{item}</span>
                                     </button>
                                 );
                             })}

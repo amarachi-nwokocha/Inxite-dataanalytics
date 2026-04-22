@@ -40,10 +40,9 @@ export default function Footer() {
   };
 
   const linkClass = (id: string) =>
-    `transition relative cursor-pointer ${
-      activeSection === id
-        ? "text-[#0dce99] font-semibold"
-        : "text-gray-400 hover:text-white"
+    `transition relative cursor-pointer ${activeSection === id
+      ? "text-[#0dce99] font-semibold"
+      : "text-gray-400 hover:text-white"
     }`;
 
   return (
@@ -62,7 +61,7 @@ export default function Footer() {
             viewport={{ once: true }}
           >
             <h2 className="text-2xl font-bold bg-gradient-to-r from-[#0dce99] to-[#008dbb] bg-clip-text text-transparent">
-              DataCraft
+              Inxite-Data Analytics
             </h2>
             <p className="text-gray-400 mt-4 leading-relaxed">
               Turning raw data into meaningful insights that drive smarter business decisions.
@@ -128,8 +127,8 @@ export default function Footer() {
           >
             <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-gray-400">
-              {["About Us", "What We Do", "Team"].map((item, i) => {
-                const id = item === "About Us" ? "about" : item === "What We Do" ? "services" : "team";
+              {["About Us", "What We Do", "Team", "How We Work", "Mission & Vision"].map((item, i) => {
+                const id = item === "About Us" ? "about" : item === "What We Do" ? "services" : item === "How We Work" ? "Work" : item === "Mission & Vision" ? "Mission" : "team";
                 return (
                   <li key={i} onClick={() => scrollToSection(id)} className={linkClass(id)}>
                     {item}
@@ -149,14 +148,14 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-3 text-gray-400">
               <li>hello@datacraft.com</li>
-              <li>Lagos, Nigeria</li>
+              <li>Abuja, Nigeria</li>
             </ul>
           </motion.div>
         </div>
 
         {/* Bottom */}
         <div className="mt-16 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
-          <p>© {new Date().getFullYear()} DataCraft. All rights reserved.</p>
+          <p>© {new Date().getFullYear()}  Inxite-Data Analytics. All rights reserved.</p>
         </div>
       </div>
     </footer>

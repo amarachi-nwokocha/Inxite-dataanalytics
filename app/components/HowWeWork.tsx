@@ -39,7 +39,7 @@ export default function HowWeWorkSection() {
     ];
 
     return (
-        <section id="Work" className="relative bg-[#05254c] text-white py-32 px-6 overflow-hidden">
+        <section id="work" className="relative bg-[#05254c] text-white py-32 px-6 overflow-hidden">
 
             {/* Glow */}
             <div className="absolute top-0 left-0 w-80 h-80 bg-[#0dce99]/20 blur-3xl rounded-full"></div>

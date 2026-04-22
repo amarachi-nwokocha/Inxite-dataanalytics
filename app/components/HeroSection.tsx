@@ -81,9 +81,8 @@ export default function HeroDenseIcons() {
         >
 
           <Button label="Work With Us" />
-          <button className="px-7 py-3 border border-white/30 rounded-xl hover:bg-white/10 transition">
-            Request a Consultation
-          </button>
+          <Button label="Request a Consultation" />
+
         </motion.div>
 
       </motion.div>

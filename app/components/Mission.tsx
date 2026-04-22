@@ -5,7 +5,7 @@ import { Target, Eye } from "lucide-react";
 
 export default function MissionVisionSection() {
     return (
-        <section id="Mission" className="relative bg-[#05254c] text-white py-32 px-6 overflow-hidden">
+        <section id="mission" className="relative bg-[#05254c] text-white py-32 px-6 overflow-hidden">
 
             {/* Background Glow */}
             <div className="absolute top-0 left-0 w-96 h-96 bg-[#0dce99]/20 blur-3xl rounded-full"></div>

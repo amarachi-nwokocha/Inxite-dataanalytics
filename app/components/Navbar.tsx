@@ -40,10 +40,10 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "About Us", id: "about" },
+    { label: "Mission & Vision", id: "mission" },
     { label: "What We Do", id: "services" },
+    { label: "How We Work", id: "work" },
     { label: "Team", id: "team" },
-    { label: "How We Work", id: "Work" },
-    { label: "Mission & Vision", id: "Mission" },
   ];
 
   const linkClass = (id: string) =>
@@ -56,8 +56,8 @@ export default function Navbar() {
     <nav className="fixed w-full bg-[#05254c]/80 backdrop-blur-md z-50">
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
         {/* Logo */}
-        <div className="text-2xl font-bold bg-gradient-to-r from-[#0dce99] to-[#008dbb] bg-clip-text text-transparent cursor-pointer">
-          DataCraft
+        <div className="text-2xl font-bold bg-linear-to-r from-[#0dce99] to-[#008dbb] bg-clip-text text-transparent cursor-pointer">
+          Inxite-Data Analytics
         </div>
 
         {/* Desktop Links */}
