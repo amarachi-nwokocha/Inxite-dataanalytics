@@ -42,14 +42,14 @@ export default function Navbar() {
     { label: "About Us", id: "about" },
     { label: "What We Do", id: "services" },
     { label: "Team", id: "team" },
-    { label: "Contact", id: "contact" },
+    { label: "How We Work", id: "Work" },
+    { label: "Mission & Vision", id: "Mission" },
   ];
 
   const linkClass = (id: string) =>
-    `relative cursor-pointer transition px-3 py-1 ${
-      activeSection === id
-        ? "text-[#0dce99] font-semibold"
-        : "text-gray-300 hover:text-white"
+    `relative cursor-pointer transition px-3 py-1 ${activeSection === id
+      ? "text-[#0dce99] font-semibold"
+      : "text-gray-300 hover:text-white"
     }`;
 
   return (
@@ -83,19 +83,16 @@ export default function Navbar() {
             className="flex flex-col gap-1 w-6 h-6 justify-center items-center"
           >
             <span
-              className={`block h-[2px] w-full bg-white transition-all ${
-                isOpen ? "rotate-45 translate-y-2" : ""
-              }`}
+              className={`block h-[2px] w-full bg-white transition-all ${isOpen ? "rotate-45 translate-y-2" : ""
+                }`}
             ></span>
             <span
-              className={`block h-[2px] w-full bg-white transition-all ${
-                isOpen ? "opacity-0" : ""
-              }`}
+              className={`block h-[2px] w-full bg-white transition-all ${isOpen ? "opacity-0" : ""
+                }`}
             ></span>
             <span
-              className={`block h-[2px] w-full bg-white transition-all ${
-                isOpen ? "-rotate-45 -translate-y-2" : ""
-              }`}
+              className={`block h-[2px] w-full bg-white transition-all ${isOpen ? "-rotate-45 -translate-y-2" : ""
+                }`}
             ></span>
           </button>
         </div>

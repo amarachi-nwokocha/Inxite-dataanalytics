@@ -6,17 +6,23 @@ import MeetTheTeam from "./components/Team";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import ContactSection from "./components/Contact";
+import MissionVisionSection from "./components/Mission";
+import HowWeWorkSection from "./components/HowWeWork";
+import ServicesShowcase from "./components/Services";
 
 export default function Home() {
   return (
-   <div>
-    <Navbar />
-    <HeroWithFloatingVisuals />
-    < AboutSection />
-    <WhatWeDoSection />
-    <MeetTheTeam />
-    <ContactSection />
-    <Footer />
-   </div>
+    <div>
+      <Navbar />
+      <HeroWithFloatingVisuals />
+      < AboutSection />
+      <MissionVisionSection />
+      <WhatWeDoSection />
+      {/* <HowWeWorkSection /> */}
+      <ServicesShowcase />
+      <MeetTheTeam />
+      {/* <ContactSection /> */}
+      <Footer />
+    </div>
   );
 }
