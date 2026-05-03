@@ -57,22 +57,7 @@ export default function WhatWeDoModern() {
       </div>
 
       {/* Heading */}
-      <motion.div
-        className="relative max-w-4xl mx-auto text-center space-y-6 z-10"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        <h2 className="text-4xl md:text-5xl font-extrabold bg-linear-to-r from-[#0dce99] to-[#008dbb] bg-clip-text text-transparent">
-          End-to-End Data Services Built for Real-World Impact
-        </h2>
-
-        <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto">
-          We combine field expertise, analytics, and technology to deliver reliable
-          data services that support evidence-based decision-making across sectors.
-        </p>
-      </motion.div>
+  
 
       {/* Service Grid */}
       <div className="relative max-w-6xl mx-auto mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
