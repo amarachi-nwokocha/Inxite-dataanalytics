@@ -112,7 +112,7 @@ export default function HowWeWorkInteractive() {
 
             </div>
 
-            <div className="absolute top-6 left-1/2 -translate-x-1/2">
+            <div id="how-we-work" className="absolute top-6 left-1/2 -translate-x-1/2">
                 <p className=" border-2 border-solid text-white/20 px-6 py-2 rounded-full text-sm font-semibold tracking-wide select-none pointer-events-none">
                     HOW WE WORK
                 </p>

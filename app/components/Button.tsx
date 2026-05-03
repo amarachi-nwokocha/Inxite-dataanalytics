@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import toast from "react-hot-toast";
+import { useRef } from "react";
 
 const services = [
     "Field Data Collection & Local Research",
@@ -36,10 +38,19 @@ export default function Button({ label = "Book Appointment" }) {
     };
 
     // handle submit
+
+    const isSubmitting = useRef(false);
+
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        // 🚨 prevent double submit (real protection)
+        if (isSubmitting.current) return;
+
+        isSubmitting.current = true;
         setLoading(true);
+
+        const loadingToast = toast.loading("Sending request...");
 
         const payload = {
             ...formData,
@@ -47,7 +58,7 @@ export default function Button({ label = "Book Appointment" }) {
         };
 
         try {
-            const res = await fetch("/api/create", {
+            const res = await fetch("/api/contact", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -58,12 +69,14 @@ export default function Button({ label = "Book Appointment" }) {
             const data = await res.json();
 
             if (!res.ok) {
-                throw new Error(data.message || "Something went wrong");
+                toast.dismiss(loadingToast);
+                toast.error(data.message || "Something went wrong");
+                return;
             }
 
-            console.log("Success:", data);
+            toast.dismiss(loadingToast);
+            toast.success("Booking request sent successfully 🚀");
 
-            // reset form
             setFormData({
                 name: "",
                 email: "",
@@ -76,11 +89,14 @@ export default function Button({ label = "Book Appointment" }) {
             setOpen(false);
         } catch (err) {
             console.error(err);
+
+            toast.dismiss(loadingToast);
+            toast.error("Network error. Please try again.");
         } finally {
             setLoading(false);
+            isSubmitting.current = false; // 🚨 unlock here
         }
     };
-
     return (
         <>
             {/* BUTTON */}

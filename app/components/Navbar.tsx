@@ -42,7 +42,7 @@ export default function Navbar() {
     { label: "About Us", id: "about" },
     { label: "Mission & Vision", id: "mission" },
     { label: "What We Do", id: "services" },
-    { label: "How We Work", id: "work" },
+    { label: "How We Work", id: "how-we-work" },
     { label: "Team", id: "team" },
   ];
 
