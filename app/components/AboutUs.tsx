@@ -169,6 +169,7 @@
 
 import { motion } from "framer-motion";
 import { BarChart3, Target, ShieldCheck, Lightbulb } from "lucide-react";
+import Button from "./Button";
 
 export default function AboutSectionRefined() {
   const textItems = [
@@ -293,9 +294,8 @@ export default function AboutSectionRefined() {
               viewport={{ once: true }}
               className="pt-4"
             >
-              <button className="px-7 py-3 bg-[#0dce99] text-[#05254c] rounded-xl font-semibold hover:scale-105 transition">
-                Work With Us
-              </button>
+            <Button />
+
             </motion.div>
           </div>
 
